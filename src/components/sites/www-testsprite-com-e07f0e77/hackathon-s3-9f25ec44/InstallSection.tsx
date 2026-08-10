@@ -29,7 +29,7 @@ export function InstallSection() {
   return (
     <section className="md:px-32">
       <div className="testsprite-container border-x border-black/[0.06]">
-        <header className="grid gap-6 border-b border-black/[0.06] px-3 py-[18px] sm:gap-8 sm:p-6 md:min-h-[192px] md:grid-cols-[3fr_2fr] md:items-center md:gap-12">
+        <header className="grid gap-6 border-b border-black/[0.06] p-6 sm:gap-8 sm:p-6 md:min-h-[192px] md:grid-cols-[3fr_2fr] md:items-center md:gap-12">
           <div>
             <p className="font-mono text-[14px] leading-[19.6px] tracking-[-0.56px] text-ts-green sm:text-[16px] sm:leading-[22.4px] sm:tracking-[-0.64px]">
               {"// Start in 3 minutes"}
