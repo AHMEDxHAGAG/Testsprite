@@ -71,7 +71,7 @@ export function PastEventsSection() {
                 width={event.imageWidth}
                 height={event.imageHeight}
                 sizes="(min-width: 1200px) 366px, (min-width: 810px) 219px, 350px"
-                className="h-[230px] w-full shrink-0 object-cover object-top transition-[filter,opacity] duration-150 group-hover:opacity-90 group-hover:contrast-105 sm:h-[420px]"
+                className="h-[200px] w-full shrink-0 object-cover object-top transition-[filter,opacity] duration-150 group-hover:opacity-90 group-hover:contrast-105 sm:h-[420px]"
               />
               <h3 className="mt-3 line-clamp-2 text-lg font-normal leading-[20px] tracking-[-0.45px] sm:text-[22px] sm:leading-[24.2px] sm:tracking-[-0.55px]">
                 {event.title}

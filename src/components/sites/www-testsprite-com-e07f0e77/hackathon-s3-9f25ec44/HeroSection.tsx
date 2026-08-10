@@ -83,6 +83,7 @@ export function HeroSection() {
                 alt=""
                 className="object-cover"
                 fill
+                preload
                 sizes="(min-width: 1200px) 560px, (min-width: 810px) 336px, calc(100vw - 60px)"
                 src={`${imageBase}/frontend-content.png`}
               />
@@ -91,7 +92,6 @@ export function HeroSection() {
                   alt="TestSprite CLI verifying a live application"
                   className="h-auto w-full"
                   height={1700}
-                  preload
                   sizes="(min-width: 1200px) 458px, (min-width: 810px) 282px, calc(88vw - 65px)"
                   src={`${imageBase}/cli-verify-light.png`}
                   width={2002}

@@ -119,10 +119,10 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#f5faf2] md:px-32">
       <div className="testsprite-container border-x border-black/10">
-        <div className="grid grid-cols-2 border-b border-black/10 md:min-h-[386px] md:grid-cols-[235px_repeat(4,minmax(0,1fr))]">
+        <div className="grid grid-cols-1 border-b border-black/10 md:min-h-[386px] md:grid-cols-[235px_repeat(4,minmax(0,1fr))]">
           <section
             aria-labelledby="stay-updated-heading"
-            className="col-span-2 border-b border-black/10 px-4 py-6 md:col-span-1 md:border-r md:border-b-0 md:pt-20 md:pb-8"
+            className="border-b border-black/10 px-4 py-6 md:border-r md:border-b-0 md:pt-20 md:pb-8"
           >
             <h2
               className="text-xl leading-[22px] font-normal tracking-[-0.4px] text-[#030303] md:text-[29px] md:leading-[31.9px] md:tracking-[-0.58px]"
@@ -151,7 +151,7 @@ export function SiteFooter() {
           {footerCategories.map((category, index) => (
             <nav
               aria-label={category.heading}
-              className={`min-w-0 px-4 py-8 md:px-6 md:pt-20 md:pb-8 ${index % 2 === 0 ? "border-r border-black/10" : ""} ${index < 2 ? "border-b border-black/10" : ""} ${index < footerCategories.length - 1 ? "md:border-r md:border-black/10" : "md:border-r-0"} md:border-b-0`}
+              className={`min-w-0 px-4 py-8 md:px-6 md:pt-20 md:pb-8 ${index < footerCategories.length - 1 ? "border-b border-black/10 md:border-r md:border-b-0" : ""}`}
               key={category.heading}
             >
               <h2 className="font-mono text-xs leading-[16.8px] text-[#4d8c58] md:text-base md:leading-[22.4px]">
@@ -173,6 +173,7 @@ export function SiteFooter() {
                       <Link
                         className={`text-sm leading-5 text-[#030303] md:text-base md:leading-[22.4px] ${linkTransition}`}
                         href={link.href}
+                        prefetch={false}
                       >
                         {link.label}
                       </Link>

@@ -30,5 +30,5 @@ Utility text: English; Copyright © 2026 TestSprite.
 
 ## Responsive Behavior
 - Desktop: five-column links and horizontal utility row.
-- Below 810px use the 350px/332px standard container, stack update panel, use a two-column category grid, then stack/wrap utilities. Keep borders shared.
+- Below 810px use the 350px/332px standard container, stack the update panel and all four category cells in one column, then stack/wrap utilities. Keep borders shared.
 - Footer should visually continue the page's pale background; compact typography 12–14px and oversized mark scaled to fit.

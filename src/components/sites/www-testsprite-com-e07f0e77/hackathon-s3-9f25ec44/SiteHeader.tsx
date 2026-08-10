@@ -224,6 +224,7 @@ export function SiteHeader() {
             aria-label="TestSprite home"
             className={`flex h-8 w-[152px] shrink-0 items-center text-[#030303] ${swiftTransition} hover:opacity-75`}
             href="/"
+            prefetch={false}
           >
             <TestSpriteLogo />
           </Link>
@@ -245,7 +246,7 @@ export function SiteHeader() {
                   aria-controls="desktop-solutions-menu"
                   aria-expanded={solutionsOpen}
                   className={`flex h-full items-center gap-2 px-4 text-[#030303] ${swiftTransition} hover:bg-[#e8efe5] focus-visible:bg-[#e8efe5]`}
-                  onClick={() => setSolutionsOpen((open) => !open)}
+                  onClick={() => setSolutionsOpen(true)}
                   onFocus={() => setSolutionsOpen(true)}
                   ref={solutionsButtonRef}
                   type="button"
@@ -330,6 +331,7 @@ export function SiteHeader() {
                     <Link
                       className={`flex h-full items-center px-4 text-[#030303] ${swiftTransition} hover:bg-[#e8efe5] focus-visible:bg-[#e8efe5]`}
                       href={link.href}
+                      prefetch={false}
                     >
                       {link.label}
                     </Link>
@@ -352,6 +354,7 @@ export function SiteHeader() {
             <Link
               className={`flex flex-1 items-center justify-center px-4 text-[#030303] ${swiftTransition} hover:bg-[#e8efe5] focus-visible:bg-[#e8efe5]`}
               href={actionLinks.signIn}
+              prefetch={false}
             >
               Sign In
             </Link>
@@ -364,8 +367,9 @@ export function SiteHeader() {
               Schedule a Call
             </a>
             <Link
-              className={`flex w-[158px] items-center justify-center bg-[#4d8c58] px-4 text-[#f5faf2] ${swiftTransition} hover:bg-[#396641] focus-visible:bg-[#396641] active:bg-[#28402c]`}
+              className={`flex w-[158px] items-center justify-center bg-[#030303] px-4 text-[#f5faf2] ${swiftTransition} hover:opacity-80 focus-visible:opacity-80 active:opacity-70`}
               href={actionLinks.signUp}
+              prefetch={false}
             >
               Get Started Free
             </Link>
@@ -393,13 +397,13 @@ export function SiteHeader() {
         <div
           aria-label="Mobile navigation"
           aria-modal="true"
-          className="fixed inset-x-0 top-[61px] bottom-0 z-40 overflow-y-auto bg-[#f5faf2] px-6 pt-[84px] pb-8 md:hidden"
+          className="fixed inset-x-0 top-[61px] bottom-0 z-40 overflow-y-auto bg-transparent px-6 pt-[84px] pb-8 before:pointer-events-none before:absolute before:inset-x-0 before:top-[84px] before:bottom-0 before:bg-[#f5faf2] md:hidden"
           id="compact-navigation"
           ref={mobileDialogRef}
           role="dialog"
           tabIndex={-1}
         >
-          <div className="mx-auto w-full">
+          <div className="relative z-10 mx-auto w-full">
             <nav aria-label="Compact navigation">
               <button
                 aria-controls="compact-solutions-list"
@@ -468,6 +472,7 @@ export function SiteHeader() {
                     href={link.href}
                     key={link.label}
                     onClick={closeMobileMenu}
+                    prefetch={false}
                   >
                     {link.label}
                   </Link>
@@ -491,6 +496,7 @@ export function SiteHeader() {
                 className={`flex h-9 items-center justify-center text-[#030303] ${swiftTransition} hover:text-[#4d8c58]`}
                 href={actionLinks.signIn}
                 onClick={closeMobileMenu}
+                prefetch={false}
               >
                 Sign In
               </Link>
@@ -504,9 +510,10 @@ export function SiteHeader() {
                 Schedule a Call
               </a>
               <Link
-                className={`flex h-10 items-center justify-center bg-[#4d8c58] text-[#f5faf2] ${swiftTransition} hover:bg-[#396641] active:bg-[#28402c]`}
+                className={`flex h-10 items-center justify-center bg-[#030303] text-[#f5faf2] ${swiftTransition} hover:opacity-80 active:opacity-70`}
                 href={actionLinks.signUp}
                 onClick={closeMobileMenu}
+                prefetch={false}
               >
                 Get Started Free
               </Link>

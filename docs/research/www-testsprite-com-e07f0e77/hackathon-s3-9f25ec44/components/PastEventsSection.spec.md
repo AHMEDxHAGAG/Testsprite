@@ -24,5 +24,5 @@ All links open in a new tab with safe rel.
 
 ## Responsive Behavior
 - Desktop: three cards in one row.
-- Below 810px stack the cards in the 350px/332px container with a shorter landscape crop around 230px; compact total height about `1062px`.
+- Below 810px stack the cards in the 350px/332px container with a shorter landscape crop around 200px; compact total height about `1062px`.
 - Compact heading padding `56px 24px 20px`, h2 `22px/24.2px`, card titles 18–20px.

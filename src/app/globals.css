@@ -140,7 +140,22 @@
   }
   html {
     @apply font-sans;
+    scrollbar-color: #9b9b9b transparent;
+    scrollbar-width: thin;
   }
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #9b9b9b;
 }
 
 @layer components {

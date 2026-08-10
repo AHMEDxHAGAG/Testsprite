@@ -19,7 +19,7 @@ Sticky wrapper → header → `testsprite-container` flex row → logo, desktop 
 
 ### Navigation/content
 - Labels: Inter, `14px/19.6px`, weight 500; compact horizontal padding.
-- Actions: Sign In is text/ghost, Schedule a Call is bordered, Get Started Free is green.
+- Actions: Sign In is text/ghost, Schedule a Call is bordered, Get Started Free is black.
 - All controls square (`border-radius:0`) and use the shared 150ms swift transition.
 
 ## States & Behaviors

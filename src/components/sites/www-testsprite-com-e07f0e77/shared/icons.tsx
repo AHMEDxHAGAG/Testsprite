@@ -6,10 +6,10 @@ export function TestSpriteLogo({
   className?: string;
 }) {
   return (
-    <span className={`inline-flex items-center gap-2 ${className ?? ""}`}>
+    <span className={`inline-flex items-center gap-1 ${className ?? ""}`}>
       <svg
         aria-hidden="true"
-        className="h-7 w-7 shrink-0"
+        className="h-6 w-6 shrink-0"
         fill="none"
         viewBox="0 0 182 182"
       >
@@ -26,7 +26,7 @@ export function TestSpriteLogo({
           fill="currentColor"
         />
       </svg>
-      <span className="text-[22px] leading-none font-bold tracking-[-1px] italic">
+      <span className="text-[19px] leading-none font-bold tracking-[-1px] italic">
         TestSprite
       </span>
     </span>
