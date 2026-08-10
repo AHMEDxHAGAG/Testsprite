@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const backgroundImage =
-  "/sites/www-testsprite-com-e07f0e77/hackathon-s3-9f25ec44/images/hero-bg-light.png";
+  "/sites/www-testsprite-com-e07f0e77/hackathon-s3-9f25ec44/images/with-testsprite.png";
 
 export function CicdSection() {
   return (
@@ -35,7 +35,7 @@ export function CicdSection() {
               href="https://docs.testsprite.com/cli/integrations/ci-cd"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto w-fit font-mono text-xs leading-[16.8px] tracking-[-0.48px] text-ts-green underline underline-offset-2 sm:text-base sm:leading-[22.4px] sm:tracking-[-0.64px]"
+              className="mt-auto w-fit font-mono text-xs leading-[16.8px] tracking-[-0.48px] text-ts-green underline underline-offset-2 transition-opacity duration-150 hover:opacity-80 sm:text-base sm:leading-[22.4px] sm:tracking-[-0.64px]"
             >
               Read the CI guide →
             </a>
@@ -46,7 +46,7 @@ export function CicdSection() {
               src={backgroundImage}
               alt=""
               fill
-              sizes="(min-width: 1200px) 703px, 350px"
+              sizes="(min-width: 1200px) 703px, (min-width: 810px) 730px, 350px"
               className="object-cover"
             />
             <pre className="relative z-10 overflow-x-auto whitespace-pre-wrap break-words border border-ts-border-strong bg-ts-bg px-4 py-3 font-mono text-xs leading-[19px] tracking-[-0.48px] text-ts-text sm:whitespace-pre sm:text-base sm:leading-[26px] sm:tracking-[-0.64px]">
