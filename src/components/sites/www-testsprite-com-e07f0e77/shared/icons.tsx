@@ -26,7 +26,7 @@ export function TestSpriteLogo({
           fill="currentColor"
         />
       </svg>
-      <span className="text-[16px] font-bold tracking-[-0.7px] sm:text-[18px]">
+      <span className="text-[22px] leading-none font-bold tracking-[-1px] italic">
         TestSprite
       </span>
     </span>

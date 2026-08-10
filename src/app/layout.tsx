@@ -36,6 +36,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.testsprite.com"),
   title: "Hackathon | TestSprite",
   description:
     "Join the TestSprite hackathon — build with TestSprite, ship open-source projects, and win prizes.",
