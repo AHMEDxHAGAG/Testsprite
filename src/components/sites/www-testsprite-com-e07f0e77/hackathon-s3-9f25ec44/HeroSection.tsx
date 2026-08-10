@@ -66,6 +66,8 @@ export function HeroSection() {
             <a
               className="mt-4 inline-flex w-fit items-center gap-1 font-mono text-[14px] leading-[19.6px] tracking-[-0.56px] text-ts-green underline decoration-1 underline-offset-4 transition-opacity duration-150 ease-[cubic-bezier(0.5,0,0,1)] hover:opacity-80 md:mt-6 md:text-[16px] md:leading-[22.4px] md:tracking-[-0.64px]"
               href="https://www.testsprite.com/discover"
+              rel="noreferrer"
+              target="_blank"
             >
               View Past Projects
               <ArrowUpRightIcon
@@ -81,7 +83,6 @@ export function HeroSection() {
                 alt=""
                 className="object-cover"
                 fill
-                preload
                 sizes="(min-width: 1200px) 560px, (min-width: 810px) 336px, calc(100vw - 60px)"
                 src={`${imageBase}/frontend-content.png`}
               />
@@ -90,6 +91,7 @@ export function HeroSection() {
                   alt="TestSprite CLI verifying a live application"
                   className="h-auto w-full"
                   height={1700}
+                  preload
                   sizes="(min-width: 1200px) 458px, (min-width: 810px) 282px, calc(88vw - 65px)"
                   src={`${imageBase}/cli-verify-light.png`}
                   width={2002}
