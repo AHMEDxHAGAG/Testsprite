@@ -1,5 +1,52 @@
 import Image from "next/image";
-import { ChevronDown, Globe2, Monitor, Moon, Sun } from "lucide-react";
+import Link from "next/link";
+import { Globe2, Monitor, Moon, Sun } from "lucide-react";
+import type { SVGProps } from "react";
+
+function YouTubeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill="none" viewBox="0 0 24 24" {...props}>
+      <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.96-1.97C18.85 4 12 4 12 4s-6.85 0-8.58.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.96 1.97C5.15 20 12 20 12 20s6.85 0 8.58-.45a2.78 2.78 0 0 0 1.96-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58Z"
+        fill="currentColor"
+      />
+      <path d="m10 15.5 6-3.5-6-3.5v7Z" fill="#f5faf2" />
+    </svg>
+  );
+}
+
+function XIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill="none" viewBox="0 0 24 24" {...props}>
+      <path
+        d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.27-8.31L3 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.84h1.73L8.46 4.05H6.6L17.8 19.84Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function GitHubIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill="none" viewBox="0 0 24 24" {...props}>
+      <path
+        d="M12 .7a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.8.8.6A11.5 11.5 0 0 0 12 .7Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill="none" viewBox="0 0 24 24" {...props}>
+      <path
+        d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.04H3.54V8.98H7.1v11.47Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 
 const footerCategories = [
   {
@@ -47,12 +94,20 @@ const footerCategories = [
 ] as const;
 
 const socialLinks = [
-  { label: "YouTube", mark: "YT", href: "https://youtube.com/@testsprite" },
-  { label: "X", mark: "X", href: "https://x.com/test_sprite" },
-  { label: "GitHub", mark: "GH", href: "https://github.com/testsprite" },
+  {
+    label: "YouTube",
+    icon: YouTubeIcon,
+    href: "https://youtube.com/@testsprite",
+  },
+  { label: "X", icon: XIcon, href: "https://x.com/test_sprite" },
+  {
+    label: "GitHub",
+    icon: GitHubIcon,
+    href: "https://github.com/testsprite",
+  },
   {
     label: "LinkedIn",
-    mark: "in",
+    icon: LinkedInIcon,
     href: "https://linkedin.com/company/testsprite",
   },
 ] as const;
@@ -105,14 +160,23 @@ export function SiteFooter() {
               <ul className="mt-6 space-y-4 md:mt-7 md:space-y-[18px]">
                 {category.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      className={`text-sm leading-5 text-[#030303] md:text-base md:leading-[22.4px] ${linkTransition}`}
-                      href={link.href}
-                      rel={"external" in link ? "noopener noreferrer" : undefined}
-                      target={"external" in link ? "_blank" : undefined}
-                    >
-                      {link.label}
-                    </a>
+                    {"external" in link ? (
+                      <a
+                        className={`text-sm leading-5 text-[#030303] md:text-base md:leading-[22.4px] ${linkTransition}`}
+                        href={link.href}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        className={`text-sm leading-5 text-[#030303] md:text-base md:leading-[22.4px] ${linkTransition}`}
+                        href={link.href}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -122,18 +186,22 @@ export function SiteFooter() {
 
         <div className="flex min-h-[84px] flex-col gap-4 border-b border-black/10 p-4 md:flex-row md:items-center md:justify-between">
           <nav aria-label="Social media" className="flex flex-wrap gap-2">
-            {socialLinks.map((social) => (
-              <a
-                aria-label={social.label}
-                className={`flex h-10 w-10 items-center justify-center border border-black/10 font-mono text-[11px] font-medium text-[#030303] md:h-[50px] md:w-[50px] md:text-xs ${linkTransition}`}
-                href={social.href}
-                key={social.label}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {social.mark}
-              </a>
-            ))}
+            {socialLinks.map((social) => {
+              const SocialIcon = social.icon;
+
+              return (
+                <a
+                  aria-label={social.label}
+                  className={`flex h-10 w-10 items-center justify-center border border-black/10 text-[#030303] md:h-[50px] md:w-[50px] ${linkTransition}`}
+                  href={social.href}
+                  key={social.label}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <SocialIcon aria-hidden="true" className="h-4 w-4" />
+                </a>
+              );
+            })}
           </nav>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -168,15 +236,13 @@ export function SiteFooter() {
               </button>
             </div>
 
-            <button
-              aria-label="Language: English"
-              className="flex h-10 items-center gap-2 border border-black/10 px-3 font-mono text-xs leading-[16.8px] text-[#030303] transition-colors duration-150 hover:bg-[#e8efe5] md:h-[50px] md:text-sm md:leading-[19.6px]"
-              type="button"
+            <div
+              className="flex h-10 w-[114px] items-center justify-center gap-2 border border-black/10 px-3 font-mono text-xs leading-[16.8px] text-[#030303] md:h-[50px] md:text-sm md:leading-[19.6px]"
             >
               <Globe2 aria-hidden="true" className="h-4 w-4 stroke-[1.5]" />
+              <span className="sr-only">Language: </span>
               English
-              <ChevronDown aria-hidden="true" className="h-3.5 w-3.5 stroke-[1.5]" />
-            </button>
+            </div>
 
             <p className="w-full font-mono text-xs leading-[16.8px] text-[#7c827d] md:w-auto md:text-sm md:leading-[19.6px]">
               Copyright © 2026 TestSprite.
