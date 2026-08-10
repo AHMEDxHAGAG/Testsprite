@@ -29,8 +29,8 @@ export function JudgingSection() {
           />
         </header>
 
-        <div className="grid border-b border-black/[0.06] md:h-[413px] md:grid-cols-2 md:grid-rows-2">
-          <article className={`${cardClassName} border-b border-black/[0.06] md:border-r`}>
+        <div className="grid border-b border-black/[0.06] sm:h-[413px] sm:grid-cols-2 sm:grid-rows-2">
+          <article className={`${cardClassName} border-b border-black/[0.06] sm:border-r`}>
             <p className={scoreClassName}>40 pts</p>
             <div className="mt-2 md:mt-0">
               <h3 className={titleClassName}>Project Quality</h3>
@@ -52,7 +52,7 @@ export function JudgingSection() {
             </div>
           </article>
 
-          <article className={`${cardClassName} border-b border-black/[0.06] md:border-r md:border-b-0`}>
+          <article className={`${cardClassName} border-b border-black/[0.06] sm:border-r sm:border-b-0`}>
             <p className={scoreClassName}>
               20 pts <span className="text-ts-green/70">+5</span>
             </p>
@@ -81,7 +81,7 @@ export function JudgingSection() {
           </article>
         </div>
 
-        <div className="testsprite-grid-bg relative h-[47px] border-b border-black/[0.06] md:h-[156px]">
+        <div className="testsprite-grid-bg relative h-[47px] border-b border-black/[0.06] sm:h-[156px]">
           <span
             aria-hidden="true"
             className="testsprite-marker absolute -top-[3px] -left-[3px]"
