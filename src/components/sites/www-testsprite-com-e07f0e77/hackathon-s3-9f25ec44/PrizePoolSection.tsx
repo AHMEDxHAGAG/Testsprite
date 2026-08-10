@@ -26,8 +26,9 @@ export function PrizePoolSection() {
 
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-1/2 h-10 border-l border-ts-green/60 sm:left-1/4 sm:right-1/4 sm:h-[50px] sm:border-x sm:border-l sm:border-r"
+            className="absolute bottom-0 left-1/2 h-10 border-l border-ts-green/60 sm:left-1/4 sm:right-1/4 sm:h-[50px] sm:border-l-0"
           >
+            <span className="absolute inset-x-0 bottom-0 top-6 hidden border-x border-ts-green/60 sm:block" />
             <span className="absolute left-0 right-0 top-6 hidden border-t border-ts-green/60 sm:block" />
             <span className="absolute left-1/2 top-0 hidden h-6 border-l border-ts-green/60 sm:block" />
           </div>
