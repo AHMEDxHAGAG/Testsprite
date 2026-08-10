@@ -10,7 +10,7 @@ Section → standard container → painterly artwork frame → centered pale CTA
 
 ## Computed Styles
 - Desktop section about `685px`; outer padding `0 128px`; inner `1174px`, top/bottom border.
-- Artwork frame height about `514px`, background `images/hero-bg-light.png` cover, padding `46px 80px 78px`.
+- Artwork frame height about `514px`, background `images/with-testsprite.png` cover, padding `46px 80px 78px`.
 - CTA panel roughly `1015×390px`, pale background, centered flex column, padding `64px`, marketing shadow.
 - h2 `46px/50.6px` weight 600; `Whole Loop.` green. Body mono `16px/22.4px` gray, max-width `620px`, text-centered, margin-top 16px.
 - Buttons row margin-top 34px, gap 12px. Primary green and secondary pale with 1px green border; both mono 16px and `16px 20px` padding, 150ms hover transitions.
@@ -21,6 +21,9 @@ Build the Whole Loop.
 Including the half most people skip. Install the CLI, wire it in as your checker, then let your agent loop. Follow on X and join Discord, where everything happens.
 Join Discord Now
 Follow @TestSprite on X
+
+## Asset
+`images/with-testsprite.png`
 
 ## Links
 - Discord: `https://discord.com/invite/GXWFjCe4an`

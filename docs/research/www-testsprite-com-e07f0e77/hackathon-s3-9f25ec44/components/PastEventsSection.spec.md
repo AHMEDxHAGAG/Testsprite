@@ -17,9 +17,9 @@ Section `id="past-events"` → standard bordered container → heading → three
 - Link hover subtly lowers image opacity or lifts contrast over 150ms; no rounded corners.
 
 ## Assets / Links / Text
-- `images/aws-anthropic-datadog-event.png` → `https://luma.com/n84hk0l9` — `AWS x Anthropic x Datadog GenAI...` — `Join us for an immersive, hands-on hackathon featuring builders shipping with the leading GenAI stack.`
-- `images/testsprite-ai-dev-event.png` → `https://luma.com/wz634w2s` — `TestSprite AI Dev Hackathon: Building...` — `Join us for a full-day AI-powered hackathon focused on building production-ready dev tooling.`
-- `images/sf-ai-vibe-coding-event.png` → `https://luma.com/f13dwefh` — `SF AI Vibe Coding Hackathon` — `Join us for future of coding — one-day SF event collaborating with the AI builder community.`
+- `images/event-aws-datadog.png` → `https://luma.com/n84hk0l9` — `AWS x Anthropic x Datadog GenAI...` — `Join us for an immersive, hands-on hackathon featuring builders shipping with the leading GenAI stack.`
+- `images/event-testsprite-ai-dev.png` → `https://luma.com/wz634w2s` — `TestSprite AI Dev Hackathon: Building...` — `Join us for a full-day AI-powered hackathon focused on building production-ready dev tooling.`
+- `images/event-sf-vibe-coding.png` → `https://luma.com/f13dwefh` — `SF AI Vibe Coding Hackathon` — `Join us for future of coding — one-day SF event collaborating with the AI builder community.`
 All links open in a new tab with safe rel.
 
 ## Responsive Behavior
